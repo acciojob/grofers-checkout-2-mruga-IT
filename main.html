@@ -31,51 +31,9 @@
   </tbody>
 </table>
 
-    <script type="text/javascript" src="./script.js"><!-- Sample HTML table for grocery list -->
-<table id="grocery-list">
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bread</td>
-      <td data-ns-test="prices">2.99</td>
-    </tr>
-    <tr>
-      <td>Milk</td>
-      <td data-ns-test="prices">1.99</td>
-    </tr>
-    <tr>
-      <td>Cheese</td>
-      <td data-ns-test="prices">4.99</td>
-    </tr>
-  </tbody>
-</table>
 
-<!-- JS code to calculate and display total price -->
-<script>
-  const prices = document.querySelectorAll('[data-ns-test="prices"]');
-  let totalPrice = 0;
 
-  // loop through all prices and add them up
-  for (let i = 0; i < prices.length; i++) {
-    totalPrice += parseFloat(prices[i].textContent);
-  }
-
-  // create new row for total price and add to table
-  const table = document.getElementById('grocery-list');
-  const newRow = table.insertRow();
-  const newCell = newRow.insertCell();
-  newCell.colSpan = 2;
-  newCell.textContent = 'Total Price: $' + totalPrice.toFixed(2);
-
-  // set data attribute for total price row
-  newRow.setAttribute('data-ns-test', 'grandTotal');
-</script>
-
+  
 </script>
 
 </body>
